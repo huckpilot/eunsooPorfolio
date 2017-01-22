@@ -10,3 +10,7 @@
     @include align-vertically(absolute);
     @include padding(null 20px);
 }
+
+.nav__list {
+    color: #fbb5f2;
+}
