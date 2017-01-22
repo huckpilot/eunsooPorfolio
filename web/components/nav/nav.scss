@@ -1,6 +1,7 @@
 .nav {
     @include position(fixed, 0);
-    background-color: rgba(#f4bbd3, 0.2);
+    // background-color: rgba(#f4bbd3, 0.2);
+    border: 1px solid $black;
     float: left;
     height: 100vh;
     width: 20%;
@@ -12,5 +13,5 @@
 }
 
 .nav__list {
-    color: #fbb5f2;
+    color: $black;
 }

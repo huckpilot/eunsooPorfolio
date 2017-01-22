@@ -4,7 +4,12 @@ angular.module('ua5App')
         return {
             restrict: 'A',
             templateUrl: 'components/nav/nav.html',
-            link: function($scope, element, attrs) {}
+            scope: {
+                navData: '='
+            },
+            link: function($scope, element, attrs) {
+                console.log($scope.navData);
+            }
         };
     }])
 ;

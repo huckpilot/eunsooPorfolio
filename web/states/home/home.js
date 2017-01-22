@@ -9,6 +9,11 @@ angular.module('ua5App.home')
             controller: 'HomeCtrl',
             controllerAs: 'ctrl',
             resolve: {
+                nav: ['navResource', function(navResource) {
+                    return navResource.get().then(function(response) {
+                        return response;
+                    });
+                }],
                 page: ['PageNavResource', function(PageNavResource) {
                     return PageNavResource.then(function(response) {
                         return response.data.items[0].fields;
@@ -17,7 +22,8 @@ angular.module('ua5App.home')
             }
         });
     }])
-    .controller('HomeCtrl', ['$scope', 'page', function($scope, page) {
+    .controller('HomeCtrl', ['$scope', 'page', 'nav', function($scope, page, nav) {
+        $scope.nav = nav;
         $scope.page = page;
     }])
 ;
