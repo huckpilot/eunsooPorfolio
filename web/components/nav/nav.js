@@ -7,9 +7,7 @@ angular.module('ua5App')
             scope: {
                 navData: '='
             },
-            link: function($scope, element, attrs) {
-                console.log($scope.navData);
-            }
+            link: function($scope, element, attrs) {}
         };
     }])
 ;
