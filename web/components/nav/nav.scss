@@ -1,0 +1,12 @@
+.nav {
+    @include position(fixed, 0);
+    background-color: rgba(#f4bbd3, 0.2);
+    float: left;
+    height: 100vh;
+    width: 20%;
+}
+
+.nav__inner {
+    @include align-vertically(absolute);
+    @include padding(null 20px);
+}

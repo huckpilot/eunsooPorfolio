@@ -25,6 +25,7 @@
     "angular-modal-service": "0.10.1",
     "ngMeta": "0.3.9",
     "jquery-unorphanize": "1.0.1",
-    "modernizr": "2.8.3"
+    "modernizr": "2.8.3",
+    "angular-contentful": "~2.0.0"
   }
 }

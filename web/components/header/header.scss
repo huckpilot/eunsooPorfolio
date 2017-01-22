@@ -1,4 +1,15 @@
 .header {
-    background: $black;
     color: $white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header__inner {
+    @include padding(20px);
+}
+
+.header__logo {
+    font-size: 50px;
 }

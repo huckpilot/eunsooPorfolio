@@ -1,3 +1,5 @@
 .home {
+    @include clearfix;
     background-color: $white;
+    position: relative;
 }

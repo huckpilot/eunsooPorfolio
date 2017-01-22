@@ -12,7 +12,7 @@
         <base href="/">
         <!-- @if PRODUCTION='false' -->
         <script src="bower_components/angular/angular.js"></script>
-        <!-- @endif -->        
+        <!-- @endif -->
         <!-- @if TESTING='true' -->
         <link
             href="_build/app.css"
@@ -69,7 +69,7 @@
             </div>
         </noscript>
         <div header></div>
-        <div 
+        <div
             ui-view
             class="fade">
         </div>
@@ -88,6 +88,7 @@
         <script src="bower_components/angulartics/dist/angulartics.min.js"></script>
         <script src="bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular-contentful/dist/angular-contentful.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
         <script src="bower_components/angular-touch/angular-touch.min.js"></script>
@@ -109,20 +110,34 @@
         <!-- end state scripts -->
         <!-- component scripts -->
         <script src="components/header/header.js"></script>
+        <script src="components/nav/nav.js"></script>
+        <script src="components/gallery/gallery.js"></script>
         <script src="components/unorphanize/unorphanize.js"></script>
         <script src="components/scroll-reveal/scroll-reveal.js"></script>
         <script src="components/share-fb/share-fb.js"></script>
         <script src="components/share-tw/share-tw.js"></script>
         <script src="components/share-e/share-e.js"></script>
-        <!-- end component scripts -->        
+        <!-- end component scripts -->
         <!-- services scripts -->
         <script src="services/preloader.js"></script>
         <script src="services/popup.js"></script>
-        <!-- end services scripts -->        
+        <!-- end services scripts -->
         <!-- animations scripts -->
         <script src="animations/fade.js"></script>
         <script src="animations/fade-child.js"></script>
         <!-- end animations scripts -->
+        <!-- animations scripts -->
+        <script src="animations/fade.js"></script>
+        <script src="animations/fade-child.js"></script>
+        <!-- end animations scripts -->
+        <!-- resource scripts -->
+        <script src="resources/page-nav.js"></script>
+        <!-- end resource scripts -->
+        <!-- start services scripts -->
+        <script src="services/locale.js"></script>
+        <script src="services/popup.js"></script>
+        <script src="services/preloader.js"></script>
+        <!-- end services scripts -->
         <!-- @endif -->
     </body>
 </html>

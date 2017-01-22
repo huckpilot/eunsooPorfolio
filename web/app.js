@@ -6,6 +6,7 @@ angular.module('ua5App.home', []);
 // end module declaration
 // Create parent module for application
 angular.module('ua5App', [
+    'contentful',
     'ngResource',
     'ngSanitize',
     'ngTouch',
@@ -28,7 +29,17 @@ angular.module('ua5App', [
         LAPTOP: 1199,
         DESKTOP: 1430
     })
-    .config(['$analyticsProvider', '$locationProvider', 'ngMetaProvider', function($analyticsProvider, $locationProvider, ngMetaProvider) {
+    .constant('LOCALES', {
+        locales: {
+            'en-US': 'en-US'
+        },
+        preferredLocale: 'en-US'
+    })
+    .config(['contentfulProvider', '$analyticsProvider', '$locationProvider', 'ngMetaProvider', function(contentfulProvider, $analyticsProvider, $locationProvider, ngMetaProvider) {
+        contentfulProvider.setOptions({
+            space: '28fl2gehs9xq',
+            accessToken: 'dede7e0304385dd3ea14ab1f4c36a3905c0c58042035a6a922ec5f76f82b39cc'
+        });
         $locationProvider.html5Mode(true);
         // Prevents bounce rate of 0.01
         $analyticsProvider.firstPageview(false);
@@ -39,7 +50,8 @@ angular.module('ua5App', [
         ngMetaProvider.setDefaultTag('description', 'Site description');
         ngMetaProvider.setDefaultTag('image', 'URL');
     }])
-    .run(['ngMeta', function(ngMeta) {
+    .run(['LocaleService', 'ngMeta', function(LocaleService, ngMeta) {
+        LocaleService.set();
         ngMeta.init();
     }])
     .directive('app', ['$rootScope', function($rootScope) {
@@ -68,9 +80,9 @@ angular.module('ua5App', [
                 $rootScope.$on('$stateChangeSuccess', function(e, toState, toStateParams, fromState) {
                     var regex = /^([^.]*).*/;
                     var toStateName = toState.name;
-                    var fromStateName = fromState.name;
+                    // var fromStateName = fromState.name;
                     var toStateParent = toStateName.match(regex)[1];
-                    var fromStateParent = fromStateName.match(regex)[1];
+                    // var fromStateParent = fromStateName.match(regex)[1];
                     $rootScope.pageClass = 'page-' + toState.name.replace('.', '-');
                     // If going directly to child from non-parent, just show
                     // child.

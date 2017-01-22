@@ -1,0 +1,8 @@
+.gallery {
+    @include position(relative, 0);
+    @include background(linear-gradient(#ff8bdc, #db44fc));
+    float: left;
+    height: 300vh;
+    margin-left: 20%;
+    width: 80%;
+}

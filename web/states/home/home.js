@@ -7,8 +7,17 @@ angular.module('ua5App.home')
             url: '/',
             templateUrl: 'states/home/home.html',
             controller: 'HomeCtrl',
-            controllerAs: 'ctrl'
+            controllerAs: 'ctrl',
+            resolve: {
+                page: ['PageNavResource', function(PageNavResource) {
+                    return PageNavResource.then(function(response) {
+                        return response.data.items[0].fields;
+                    });
+                }]
+            }
         });
     }])
-    .controller('HomeCtrl', [function() {}])
+    .controller('HomeCtrl', ['$scope', 'page', function($scope, page) {
+        $scope.page = page;
+    }])
 ;

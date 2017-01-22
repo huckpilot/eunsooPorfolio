@@ -23,6 +23,7 @@ config:
                     - web/bower_components/angular-modal-service/dst/angular-modal-service.min.js                    
                     - web/bower_components/jquery-unorphanize/unorphanize.jquery.min.js
                     - web/bower_components/modernizr/modernizr.js
+                    - web/bower_components/angular-contentful/angular-contentful.js
                     # end bower_components
                 dest: web/_build/vendor.js
             app:
