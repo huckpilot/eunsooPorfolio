@@ -4,5 +4,12 @@
             class="gallery__title"
             ng-bind="galleryData.fields.title">
         </div>
+        <div class="gallery__pictures">
+            <div
+                class="gallery__picture"
+                ng-repeat="media in galleryData.fields.media"
+                media="media">
+            </div>
+        </div>
     </div>
 </div>

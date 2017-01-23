@@ -1,0 +1,11 @@
+.media__asset-wrap {
+    position: relative;
+    text-align: left;
+    z-index: 1;
+}
+
+.media__image,
+.media__video {
+    max-height: 600px;
+    max-width: 70%;
+}
