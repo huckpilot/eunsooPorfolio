@@ -15,3 +15,8 @@
 .nav__list {
     color: $black;
 }
+
+.nav__logo {
+    @include padding(20px null null 20px);
+    font-size: 30px;
+}

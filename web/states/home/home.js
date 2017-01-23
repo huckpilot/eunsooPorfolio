@@ -31,7 +31,8 @@ angular.module('ua5App.home')
         _.each(nav, function(nav) {
             $scope.navItems.push({
                 name: nav.fields.title,
-                sref: 'home.category({ slug: \'' + nav.fields.slug + '\' })'
+                sref: 'home.category({ slug: \'' + nav.fields.slug + '\' })',
+                media: nav.fields.media
             });
         });
     }])

@@ -1,4 +1,19 @@
 <div class="nav">
+    <div
+        ng-mouseenter="showText = true"
+        ng-mouseleave="showText = false"
+        class="nav__logo">
+        <div
+            ng-hide="showText"
+            class="nav__logo__text">
+            Eunsoo Jeong
+        </div>
+        <div
+            ng-show="showText"
+            class="nav__logo__text__alt">
+            Don't touch me
+        </div>
+    </div>
 	<div class="nav__inner">
         <ul class="nav__list">
             <li

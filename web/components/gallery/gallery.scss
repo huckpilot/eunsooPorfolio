@@ -1,10 +1,8 @@
 .gallery {
     @include position(relative, 0);
-    // @include background(linear-gradient(#ff8bdc, #db44fc));
+    @include background(linear-gradient(rgba(#ff8bdc, 0.2), rgba(#db44fc, 0.2)));
     border: 1px solid $black;
     float: left;
-
-    height: 300vh;
     margin-left: 20%;
     width: 80%;
 }
