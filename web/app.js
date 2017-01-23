@@ -19,11 +19,13 @@ angular.module('ua5App', [
     'angular-loading-bar',
     'angularModalService',
     'ngMeta',
+    'duScroll',
     // start add states as app dependency
     'ua5App.home.category',
     'ua5App.home'
     // end add states as app dependency
 ])
+    .value('duScrollBottomSpy', true)
     .constant('BREAKPOINTS', {
         MOBILE: 375,
         PHABLET: 767,
