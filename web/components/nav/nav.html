@@ -1,4 +1,7 @@
-<div class="nav">
+<div
+    ng-click="changeClass()"
+    ng-class="bigNav"
+    class="nav">
     <div
         ng-mouseenter="showText = true"
         ng-mouseleave="showText = false"
@@ -12,6 +15,9 @@
             ng-show="showText"
             class="nav__logo__text__alt">
             Don't touch me
+        </div>
+        <div class="nav__logo__acronym">
+            EJ
         </div>
     </div>
 	<div class="nav__inner">

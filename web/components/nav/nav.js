@@ -7,7 +7,17 @@ angular.module('ua5App')
             scope: {
                 navData: '='
             },
-            link: function($scope, element, attrs) {}
+            link: function($scope, element, attrs) {
+                $scope.bigNav = 'nav--big';
+
+                $scope.changeClass = function() {
+                    if ($scope.bigNav === 'nav--big') {
+                        $scope.bigNav = '';
+                    } else {
+                        $scope.bigNav = 'nav--big';
+                    }
+                };
+            }
         };
     }])
 ;

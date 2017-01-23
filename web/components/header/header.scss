@@ -1,16 +1,16 @@
-// .header {
-//     border: 1px solid $black;
-//     color: $black;
-//     position: fixed;
-//     top: 0;
-//     width: 100%;
-//     z-index: 2;
-// }
+.header {
+    border: 1px solid $black;
+    color: $black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
 
-// .header__inner {
-//     @include padding(20px);
-// }
+.header__inner {
+    @include padding(20px);
+}
 
-// .header__logo {
-//     font-size: 50px;
-// }
+.header__logo {
+    font-size: 50px;
+}
