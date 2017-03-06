@@ -1,14 +1,14 @@
 .gallery {
     @include position(relative, 0);
-    // @include background(linear-gradient(rgba(#ff8bdc, 0.2), rgba(#db44fc, 0.2)));
     border: 1px solid $black;
     float: left;
     margin-left: 24.5%;
     width: 80%;
-}
 
-.gallery__thumbs {
-    @include position(fixed, 12px null null 20%);
+    &.gallery--big {
+        margin-left: 14.5%;
+        width: 90%;
+    }
 }
 
 .gallery__thumb {

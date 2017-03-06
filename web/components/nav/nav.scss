@@ -42,7 +42,6 @@
     &:hover {
 
         &::after {
-            // width: 0%;
             @include transform(scaleX(1));
         }
     }

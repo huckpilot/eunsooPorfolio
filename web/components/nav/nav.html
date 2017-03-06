@@ -1,5 +1,4 @@
 <div
-    ng-click="changeClass()"
     ng-class="bigNav"
     class="nav">
     <div
@@ -18,6 +17,12 @@
         </div>
         <div class="nav__logo__acronym">
             EJ
+        </div>
+        <div
+            ng-click="changeClass()"
+            class="nav__switch">
+            {{bar}}
+            Switch
         </div>
     </div>
 	<div class="nav__inner">

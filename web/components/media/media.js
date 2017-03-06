@@ -8,8 +8,6 @@ angular.module('ua5App')
                 media: '='
             },
             link: function($scope, element, attrs) {
-                console.log($scope.media);
-                console.log('gg');
             }
         };
     }])
