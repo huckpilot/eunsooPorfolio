@@ -2,9 +2,8 @@
     @include transition(width $transition-speed ease-in-out);
     @include position(fixed, 0);
     border: 1px solid $black;
-    float: left;
     height: 100vh;
-    width: 5%;
+    width: 500px;
 
     &.nav--big {
         width: 20%;

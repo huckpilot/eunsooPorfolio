@@ -51,3 +51,33 @@
         fill: $fill;
     }
 }
+
+@mixin masonry-grid($width, $child-selector) {
+    @include margin((-$site-gutter / 2) (-$site-gutter / 2) null);
+
+    .masonry__item {
+        width: $width;
+
+        #{$child-selector} {
+            margin: $site-gutter / 2;
+        }
+    }
+
+    @include media($mobile) {
+        @include margin((-$site-gutter) (-$site-gutter) null);
+
+        .masonry__item {
+            width: 100%;
+
+            #{$child-selector} {
+                border-top: 1px solid #000;
+                margin: 0;
+                padding: $site-gutter;
+            }
+
+            &:first-child #{$child-selector} {
+                border-top: 0;
+            }
+        }
+    }
+}

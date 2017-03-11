@@ -16,14 +16,18 @@
                 </a>
             </div>
         </div>
-        hello
         <div
             class="gallery__pictures">
             <div
-                id="{{media.sys.id}}"
-                class="gallery__picture"
-                ng-repeat="media in galleryData.fields.media"
-                media="media">
+                class="gallery__grid"
+                masonry
+                masonry-options="masonryOptions">
+                <div
+                    id="{{media.sys.id}}"
+                    class="masonry__item"
+                    ng-repeat="media in galleryData.fields.media"
+                    media="media">
+                </div>
             </div>
         </div>
     </div>

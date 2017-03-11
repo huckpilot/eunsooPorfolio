@@ -1,14 +1,16 @@
 .gallery {
-    @include position(relative, 0);
     border: 1px solid $black;
-    float: left;
-    margin-left: 24.5%;
+    margin-left: 25%;
     width: 80%;
 
     &.gallery--big {
         margin-left: 14.5%;
         width: 90%;
     }
+}
+
+.gallery__thumbs {
+    @include position(fixed, 12px null null 20%);
 }
 
 .gallery__thumb {
@@ -51,4 +53,9 @@
             content: '';
         }
     }
+}
+
+.gallery__grid {
+    @include masonry-grid(20%, '.media');
+    // margin-right: $site-gutter / 2;
 }

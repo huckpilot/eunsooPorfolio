@@ -7,7 +7,11 @@ angular.module('ua5App')
             scope: {
                 galleryData: '='
             },
-            link: function($scope, element, attrs) {}
+            link: function($scope, element, attrs) {
+                $scope.masonryOptions = {
+                    child: '.media'
+                };
+            }
         };
     }])
 ;

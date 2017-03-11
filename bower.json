@@ -27,6 +27,7 @@
     "jquery-unorphanize": "1.0.1",
     "modernizr": "2.8.3",
     "angular-contentful": "~2.0.0",
-    "angular-scroll": "~1.0.0"
+    "angular-scroll": "~1.0.0",
+    "masonry": "~4.1.1"
   }
 }

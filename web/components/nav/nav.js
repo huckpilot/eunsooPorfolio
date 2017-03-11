@@ -10,14 +10,8 @@ angular.module('ua5App')
             },
             link: function($scope, element, attrs) {
                 $scope.bigNav = 'nav--big';
-                $scope.bar = false;
 
                 $scope.changeClass = function() {
-                    if (!$scope.bar) {
-                        $scope.bar = true;
-                    } else {
-                        $scope.bar = false;
-                    }
                 };
             }
         };
