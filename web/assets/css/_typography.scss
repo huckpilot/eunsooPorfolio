@@ -13,6 +13,10 @@ a {
     cursor: pointer;
 }
 
+%h1-a {
+    font-size: 70px;
+}
+
 %h1 {
     font-size: 36px;
 }
@@ -26,6 +30,10 @@ a {
 }
 
 @include media($tablet) {
+
+    %h1-a {
+        font-size: 60px;
+    }
 
     %h1 {
         font-size: 24px;
@@ -41,6 +49,10 @@ a {
 }
 
 @include media($phablet) {
+
+    %h1-a {
+        font-size: 50px;
+    }
 
     %h1 {
         font-size: 18px;

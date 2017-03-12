@@ -8,6 +8,40 @@
     @include media($phablet) {
         height: 50px;
     }
+
+    &.nav--alt {
+        background-color: $black;
+
+        .nav__logo__text {
+            color: $white;
+        }
+
+        .nav_item__icon {
+            @include svg(32px, 32px, $white);
+        }
+    }
+}
+
+.nav__menu__item {
+    @include position(fixed, 0 null null 0);
+    @include transform(rotate(0deg) translateX(0%));
+    @include transform-origin(center center);
+    height: 100vh;
+    width: 100vw;
+
+    @include media($phablet) {
+        @include position(fixed, 0 null null 0);
+        @include transform(rotate(-90deg) translateX(-100%));
+        @include transform-origin(left top);
+        height: 100vw;
+        width: 100vh;
+    }
+}
+
+.nav__menu__item__text {
+    @extend %h1-a;
+    @include align-all(absolute);
+    color: rgba($black, 0.1);
 }
 
 .nav__background {
@@ -34,14 +68,17 @@
 .nav_item__icon {
 
     & + & {
-        margin-left: 20px;
+        margin-left: 8px;
     }
 }
 
 .nav__logo__text {
     @extend %h1;
+    color: $black;
+    cursor: pointer;
     display: inline-block;
     position: relative;
+    text-decoration: none;
     top: -5px;
 }
 
@@ -49,12 +86,12 @@
     @include transition(all 0.3s ease-in, fill 0.3s ease-in);
     @include transform(rotate(90deg));
     @include transform-origin(center);
-    @include svg(40px, 40px, $black);
+    @include svg(32px, 32px, $black);
     display: inline-block;
 
-    &:hover {
-        @include svg(32px, 32px, $white);
-
-        border: 2px solid $black;
+    @include media($phablet) {
+        @include svg(28px, 28px, $black);
+        top: 3px;
+        position: relative;
     }
 }

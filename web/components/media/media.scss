@@ -5,7 +5,13 @@
 }
 
 .media__image {
+    @include transition(all 0.3s ease-in-out);
+    // @include filter(grayscale(100%) invert(100%));
     overflow: hidden;
+
+    &:hover {
+        @include filter(grayscale(0%) invert(0%));
+    }
 
     @include media($phablet) {
         border-top: 1px solid #000;
@@ -23,7 +29,7 @@
 .media__info {
     @include transition(opacity 0.3s ease-out);
     margin-top: 7px;
-    opacity: 0;
+    opacity: 0.2;
 
     @include media($phablet) {
         opacity: 1;

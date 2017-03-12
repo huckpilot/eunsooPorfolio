@@ -1,36 +1,54 @@
-<div class="nav">
+<div class="nav__menu__item">
+    <div class="nav__menu__item__text">
+        Backgrounds
+    </div>
+</div>
+<div
+    class="nav"
+    ng-class="{'nav--alt': alternative}">
     <div class="nav__inner">
-        <div class="nav__logo__text">
+        <a
+            href=""
+            ng-click="changeClass()"
+            ng-if="!alternative"
+            class="nav__logo__text">
             EUNSOO
-        </div>
+        </a>
+        <a
+            href=""
+            ng-click="changeClass()"
+            ng-if="alternative"
+            class="nav__logo__text">
+            KOREAN
+        </a>
             <a
                 ng-mouseenter="overlayOn()"
                 ng-mouseleave="overlayOff()"
                 ui-sref="{{ colorStyling }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
-                ng-include="'assets/images/icon.svg'">
+                ng-include="'assets/images/color-styling.svg'">
             </a>
             <a
                 ng-mouseenter="overlay()"
-                ui-sref="{{ background }}"
+                ui-sref="{{ backgrounds }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
-                ng-include="'assets/images/icon.svg'">
+                ng-include="'assets/images/landscape.svg'">
             </a>
             <a
                 ng-mouseenter="overlay()"
                 ui-sref="{{ sketchBook }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
-                ng-include="'assets/images/icon.svg'">
+                ng-include="'assets/images/sketchbook.svg'">
             </a>
             <a
                 ng-mouseenter="overlay()"
                 ui-sref="{{ comics }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
-                ng-include="'assets/images/icon.svg'">
+                ng-include="'assets/images/comic.svg'">
             </a>
             <a
                 ng-mouseenter="overlay()"
@@ -47,9 +65,19 @@
                 ng-include="'assets/images/sculpture.svg'">
             </a>
         </ul>
-        <div
+        <a
+            href=""
+            ng-click="changeClass()"
+            ng-if="!alternative"
             class="nav__logo__text">
             JEONG
-        </div>
+        </a>
+        <a
+            href=""
+            ng-click="changeClass()"
+            ng-if="alternative"
+            class="nav__logo__text">
+            ANGRY
+        </a>
     </div>
 </div>
