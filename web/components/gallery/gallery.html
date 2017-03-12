@@ -1,21 +1,5 @@
-<div
-    class="gallery"
-    ng-class="gallery--big">
+<div class="gallery">
     <div class="gallery__inner">
-        <div class="gallery__thumbs">
-            <div class="gallery__thumbs__thumbs">
-                <a
-                    du-smooth-scroll
-                    du-scrollspy
-                    href="#{{media.sys.id}}"
-                    class="gallery__thumb"
-                    ng-repeat="media in galleryData.fields.media">
-                    <img
-                        class="gallery__thumb__media"
-                        ng-src="{{media.fields.asset.fields.file.url}}">
-                </a>
-            </div>
-        </div>
         <div
             class="gallery__pictures">
             <div

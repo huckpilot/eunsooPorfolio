@@ -1,10 +1,44 @@
-.media__asset-wrap {
+.media {
+    @include transition(background-color 0.3s);
+    display: block;
     position: relative;
-    text-align: left;
-    z-index: 1;
 }
 
 .media__image {
-    max-height: 600px;
-    max-width: 70%;
+    overflow: hidden;
+
+    @include media($phablet) {
+        border-top: 1px solid #000;
+        padding-top: 10px;
+    }
+}
+
+.media__image__inner {
+    @include transition(transform $transition-speed);
+    @include backface-visibility(hidden);
+    display: block;
+    width: 100%;
+}
+
+.media__info {
+    @include transition(opacity 0.3s ease-out);
+    margin-top: 7px;
+    opacity: 0;
+
+    @include media($phablet) {
+        opacity: 1;
+    }
+
+    &.media__info--visible {
+        opacity: 1;
+    }
+
+}
+
+.media__title {
+    @extend %h3;
+}
+
+.media__date {
+    @extend %h6;
 }

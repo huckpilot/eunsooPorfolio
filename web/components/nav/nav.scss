@@ -1,79 +1,60 @@
 .nav {
-    @include transition(width $transition-speed ease-in-out);
-    @include position(fixed, 0);
-    border: 1px solid $black;
-    height: 100vh;
-    width: 500px;
+    @include position(fixed, 0 null null 0);
+    @include transform(rotate(-90deg) translateX(-100%));
+    @include transform-origin(left top);
+    height: 80px;
+    width: 100vh;
 
-    &.nav--big {
-        width: 20%;
-
-        .nav__logo__text,
-        .nav__logo__text__alt {
-            display: block;
-        }
-
-        .nav__logo__acronym {
-            display: none;
-        }
+    @include media($phablet) {
+        height: 50px;
     }
+}
+
+.nav__background {
+    background-color: $black;
+    display: none;
+    height: calc(100% - 40px);
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 
 .nav__inner {
     @include align-vertically(absolute);
-    @include padding(null 20px);
-}
-
-.nav__list {
-    color: $black;
-}
-
-.nav__list__item {
-    margin-top: 20px;
-}
-
-.nav__list__link {
-    color: $black;
-    overflow: hidden;
+    @include padding(20px 20px 0 20px);
     position: relative;
-    text-decoration: none;
+    text-align: center;
 
-    &:hover {
-
-        &::after {
-            @include transform(scaleX(1));
-        }
+    @include media($phablet) {
+        padding-top: 10px;
     }
-
-    &::after {
-        @include transition(all $transition-speed ease-in-out);
-        @include transform(scaleX(0));
-        border-bottom: 1px solid $black;
-        content: '';
-        display: block;
-        height: 1px;
-        margin: 0 auto;
-        position: absolute;
-        text-align: center;
-        width: 100%;
-    }
-
-    & + & {
-        margin-top: 30px;
-    }
-}
-
-.nav__logo {
-    @include padding(20px null null 20px);
-    font-size: 30px;
 }
 
 .nav__logo__text,
-.nav__logo__text__alt {
-    display: none;
+.nav_item__icon {
+
+    & + & {
+        margin-left: 20px;
+    }
 }
 
-.nav__logo__acronym {
-    display: block;
-    opacity: 1;
+.nav__logo__text {
+    @extend %h1;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+}
+
+.nav_item__icon {
+    @include transition(all 0.3s ease-in, fill 0.3s ease-in);
+    @include transform(rotate(90deg));
+    @include transform-origin(center);
+    @include svg(40px, 40px, $black);
+    display: inline-block;
+
+    &:hover {
+        @include svg(32px, 32px, $white);
+
+        border: 2px solid $black;
+    }
 }

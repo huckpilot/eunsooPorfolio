@@ -7,7 +7,6 @@ angular.module('ua5App')
                 masonryOptions: '='
             },
             link: function($scope, element, attrs) {
-                console.log($scope.masonryOptions);
                 var ITEM_SELECTOR = '.masonry__item';
                 var $element = $(element);
                 // Applies masonry layout. Throttled because this is a

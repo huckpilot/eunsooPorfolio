@@ -1,41 +1,55 @@
-<div
-    ng-class="bigNav"
-    class="nav">
-    <div
-        ng-mouseenter="showText = true"
-        ng-mouseleave="showText = false"
-        class="nav__logo">
-        <div
-            ng-hide="showText"
-            class="nav__logo__text">
-            Eunsoo Jeong
+<div class="nav">
+    <div class="nav__inner">
+        <div class="nav__logo__text">
+            EUNSOO
         </div>
-        <div
-            ng-show="showText"
-            class="nav__logo__text__alt">
-            Don't touch me
-        </div>
-        <div class="nav__logo__acronym">
-            EJ
-        </div>
-        <div
-            ng-click="changeClass()"
-            class="nav__switch">
-            Switch
-        </div>
-    </div>
-	<div class="nav__inner">
-        <ul class="nav__list">
-            <li
-                ng-repeat="nav in navData"
-                class="nav__list__item">
-                <a
-                    ui-sref="{{ nav.sref }}"
-                    ui-sref-active="active"
-                    class="nav__list__link"
-                    ng-bind="nav.name">
-                </a>
-            </li>
+            <a
+                ng-mouseenter="overlayOn()"
+                ng-mouseleave="overlayOff()"
+                ui-sref="{{ colorStyling }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/icon.svg'">
+            </a>
+            <a
+                ng-mouseenter="overlay()"
+                ui-sref="{{ background }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/icon.svg'">
+            </a>
+            <a
+                ng-mouseenter="overlay()"
+                ui-sref="{{ sketchBook }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/icon.svg'">
+            </a>
+            <a
+                ng-mouseenter="overlay()"
+                ui-sref="{{ comics }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/icon.svg'">
+            </a>
+            <a
+                ng-mouseenter="overlay()"
+                ui-sref="{{ threeD }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/3d.svg'">
+            </a>
+            <a
+                ng-mouseenter="overlay()"
+                ui-sref="{{ sculpture }}"
+                ui-sref-active="active"
+                class="nav_item__icon"
+                ng-include="'assets/images/sculpture.svg'">
+            </a>
         </ul>
+        <div
+            class="nav__logo__text">
+            JEONG
+        </div>
     </div>
 </div>

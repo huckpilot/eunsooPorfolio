@@ -1,8 +1,23 @@
 <div
     class="media">
-    <div class="media__asset-wrap">
+    <div
+        class="media__image"
+        ng-mouseover="hover = 'on'"
+        ng-mouseleave="hover = 'off'">
         <img
-            class="media__image"
+            class="media__image__inner"
             ng-src="{{media.fields.asset.fields.file.url}}">
+    </div>
+    <div
+        class="media__info"
+        ng-class="{'media__info--visible': hover === 'on'}">
+        <div
+            class="media__title"
+            ng-bind="media.fields.title">
+        </div>
+        <div
+            class="media__date"
+            ng-bind="media.fields.date">
+        </div>
     </div>
 </div>

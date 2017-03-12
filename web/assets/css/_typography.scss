@@ -14,20 +14,43 @@ a {
 }
 
 %h1 {
+    font-size: 36px;
+}
+
+%h3 {
     font-size: 20px;
-    font-weight: bold;
+}
+
+%h6 {
+    font-size: 14px;
 }
 
 @include media($tablet) {
 
     %h1 {
-        font-size: 15px;
+        font-size: 24px;
+    }
+
+    %h3 {
+        font-size: 18px;
+    }
+
+    %h6 {
+        font-size: 14px;
     }
 }
 
 @include media($phablet) {
 
     %h1 {
+        font-size: 18px;
+    }
+
+    %h3 {
+        font-size: 16px;
+    }
+
+    %h6 {
         font-size: 12px;
     }
 }

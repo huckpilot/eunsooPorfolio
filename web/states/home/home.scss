@@ -1,5 +1,13 @@
 .home {
     @include clearfix;
     background-color: $white;
+    height: 100vh;
+    margin-left: 80px;
     position: relative;
+    width: calc(100% - 80px);
+
+    @include media($phablet) {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
 }

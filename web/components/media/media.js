@@ -7,8 +7,7 @@ angular.module('ua5App')
             scope: {
                 media: '='
             },
-            link: function($scope, element, attrs) {
-            }
+            link: function($scope, element, attrs) {}
         };
     }])
 ;
