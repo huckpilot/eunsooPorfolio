@@ -18,6 +18,11 @@
 
         .nav_item__icon {
             @include svg(32px, 32px, $white);
+
+            @include media($phablet) {
+                @include svg(28px, 28px, $white);
+            }
+
         }
     }
 }
@@ -41,7 +46,7 @@
 .nav__menu__item__text {
     @extend %h1-a;
     @include align-all(absolute);
-    color: rgba($black, 0.1);
+    color: $black;
 }
 
 .nav__background {
@@ -91,7 +96,7 @@
 
     @include media($phablet) {
         @include svg(28px, 28px, $black);
-        top: 3px;
         position: relative;
+        top: 3px;
     }
 }

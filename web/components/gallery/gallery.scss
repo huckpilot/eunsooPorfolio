@@ -8,12 +8,8 @@
 
 
 .gallery__grid {
-    @include masonry-grid(25%, '.media');
+    @include masonry-grid(50%, '.media');
     margin-right: $site-gutter / 2;
-
-    @include media($phablet) {
-        @include masonry-grid(50%, '.media');
-    }
 }
 
 .masonry__item {
@@ -31,6 +27,6 @@
     }
 
     &:nth-child(odd) {
-        margin-top: 40vh;
+        margin-top: 39vh;
     }
 }

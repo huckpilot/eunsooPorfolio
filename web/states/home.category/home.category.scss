@@ -1,1 +1,9 @@
+.home-category {
 
+    &.home-category__backgrounds {
+
+        .gallery__grid {
+            @include masonry-grid(100%, '.media');
+        }
+    }
+}

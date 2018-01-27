@@ -10,6 +10,7 @@ angular.module('ua5App.home.category')
     }])
     .controller('homeCategoryCtrl', ['$stateParams', '$scope', 'nav', function($stateParams, $scope, nav) {
         $scope.currentNav = _.find(nav, function(nav) {
+            $scope.category = 'home-category__' + nav.fields.slug;
             return nav.fields.slug === $stateParams.slug;
         });
     }])

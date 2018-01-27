@@ -1,6 +1,7 @@
 <div class="nav__menu__item">
-    <div class="nav__menu__item__text">
-        Backgrounds
+    <div
+        class="nav__menu__item__text"
+        ng-bind="sectionTitle">
     </div>
 </div>
 <div
@@ -22,44 +23,55 @@
             KOREAN
         </a>
             <a
-                ng-mouseenter="overlayOn()"
-                ng-mouseleave="overlayOff()"
-                ui-sref="{{ colorStyling }}"
+                ng-click="setTitle(colorStyling.name)"
+                ng-mouseenter="previewTitle(colorStyling.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ colorStyling.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/color-styling.svg'">
             </a>
             <a
-                ng-mouseenter="overlay()"
-                ui-sref="{{ backgrounds }}"
+                ng-click="setTitle(backgrounds.name)"
+                ng-mouseenter="previewTitle(backgrounds.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ backgrounds.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/landscape.svg'">
             </a>
             <a
-                ng-mouseenter="overlay()"
-                ui-sref="{{ sketchBook }}"
+                ng-click="setTitle(sketchBook.name)"
+                ng-mouseenter="previewTitle(sketchBook.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ sketchBook.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/sketchbook.svg'">
             </a>
             <a
-                ng-mouseenter="overlay()"
-                ui-sref="{{ comics }}"
+                ng-click="setTitle(comics.name)"
+                ng-mouseenter="previewTitle(comics.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ comics.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/comic.svg'">
             </a>
             <a
-                ng-mouseenter="overlay()"
-                ui-sref="{{ threeD }}"
+                ng-click="setTitle(threeD.name)"
+                ng-mouseenter="previewTitle(threeD.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ threeD.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/3d.svg'">
             </a>
             <a
-                ng-mouseenter="overlay()"
-                ui-sref="{{ sculpture }}"
+                ng-click="setTitle(sculpture.name)"
+                ng-mouseenter="previewTitle(sculpture.name)"
+                ng-mouseleave="revertTitle()"
+                ui-sref="{{ sculpture.slug }}"
                 ui-sref-active="active"
                 class="nav_item__icon"
                 ng-include="'assets/images/sculpture.svg'">

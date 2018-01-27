@@ -10,3 +10,7 @@
         width: calc(100% - 50px);
     }
 }
+
+.home__nav {
+    @include filter(blur(50px));
+}
